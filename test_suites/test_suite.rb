@@ -1,16 +1,17 @@
 require 'watir'
 require 'webdrivers'
-require 'testcases'
+require_relative 'testcases'
+require_relative 'auxiliary_methods'
 
 OUTPUT_FILE = 'results.txt'.freeze
+USER_LOGIN = 'vlashk@ukr.net'
+USER_PASSWORD = 'zse4rfvcxdr5'
 
-def preparing_files
-  File.delete(OUTPUT_FILE) if File.exists?(OUTPUT_FILE)
-end
+preparing_files
 
-def preparing_browser(browser)
-  @browser = Watir::Browser.new(browser)
-  @browser.window.maximize
-  @browser.goto 'https://demoapp.strongqa.com/'
-  @browser.wait_until { |b| b.title == "Demo web application - Home" }
+browser_list = [:chrome, :firefox]
+
+browser_list.each do |b|
+  # tc_01(b)
+  tc_02(b)
 end
