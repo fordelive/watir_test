@@ -1,4 +1,4 @@
-CLICK_TIMEOUT = 1
+CLICK_TIMEOUT = 0
 
 def tc_01(browser)
   preparing_browser(browser)
