@@ -7,11 +7,17 @@ OUTPUT_FILE = 'results.txt'.freeze
 USER_LOGIN = 'vlashk@ukr.net'
 USER_PASSWORD = 'zse4rfvcxdr5'
 
+INCORRECT_LOGIN = 'Bla^bla@mail@.net'
+INCORRECT_PASSWORD = '123456'
+
 preparing_files
 
-browser_list = [:chrome, :firefox]
+# BROWSER_LIST = [:chrome, :firefox]
+BROWSER_LIST = [:chrome]
 
-browser_list.each do |b|
-  # tc_01(b)
-  tc_02(b)
+BROWSER_LIST.each do |browser|
+  # tc_01(browser)
+  # tc_02(browser)
+  # tc_03(browser)
+  tc_04(browser)
 end
