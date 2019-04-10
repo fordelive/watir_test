@@ -1,8 +1,13 @@
 require 'watir'
 require 'webdrivers'
-require_relative 'testcases'
 require_relative 'auxiliary_methods'
+require_relative 'tc_01'
+require_relative 'tc_02'
+require_relative 'tc_03'
+require_relative 'tc_04'
+require_relative 'tc_05'
 
+CLICK_TIMEOUT = 0
 OUTPUT_FILE = 'results.txt'.freeze
 USER_LOGIN = 'vlashk@ukr.net'
 USER_PASSWORD = 'zse4rfvcxdr5'
