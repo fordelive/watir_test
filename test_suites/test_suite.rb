@@ -1,11 +1,9 @@
 require 'watir'
 require 'webdrivers'
 require_relative 'auxiliary_methods'
-require_relative 'tc_01'
-require_relative 'tc_02'
-require_relative 'tc_03'
-require_relative 'tc_04'
-require_relative 'tc_05'
+
+Dir['tc_??.rb'].each {|file| require_relative file}
+
 
 CLICK_TIMEOUT = 0
 OUTPUT_FILE = 'results.txt'.freeze
