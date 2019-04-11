@@ -1,8 +1,11 @@
 require 'watir'
 require 'webdrivers'
-require_relative 'testcases'
 require_relative 'auxiliary_methods'
 
+Dir['tc_??.rb'].each {|file| require_relative file}
+
+
+CLICK_TIMEOUT = 0
 OUTPUT_FILE = 'results.txt'.freeze
 USER_LOGIN = 'vlashk@ukr.net'
 USER_PASSWORD = 'zse4rfvcxdr5'
